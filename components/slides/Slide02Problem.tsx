@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { 
   Factory, 
   Flame, 
@@ -15,7 +15,7 @@ import {
 export default function Slide02Problem({ isActive }: { isActive: boolean }) {
   if (!isActive) return null;
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -26,7 +26,7 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
@@ -35,7 +35,7 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
     },
   };
 
-  const painPointContainerVariants = {
+  const painPointContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,

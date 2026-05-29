@@ -80,8 +80,8 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 0.32, delay: 0.52, origin: "left" }}
-          className="w-full h-px bg-white/10"
+          transition={{ duration: 0.32, delay: 0.52 }}
+          className="w-full h-px bg-white/10 origin-left"
         />
 
         {/* Four Pillars */}
