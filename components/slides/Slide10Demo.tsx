@@ -39,7 +39,7 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
 
   return (
     <div
-      className="w-full h-full bg-[#020503] text-white relative flex flex-col justify-evenly items-center"
+      className="w-full h-full bg-white text-slate-900 relative flex flex-col justify-evenly items-center"
       style={{
         fontFamily: "'Inter', sans-serif",
         padding: "48px 48px 48px",
@@ -52,18 +52,18 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
         initial={{ opacity: 0 }} animate={{ opacity: 0.025 }} transition={{ duration: 0.60 }}
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(0,0,0,1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,1) 1px,transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_10%,_#020503_90%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_10%,_#FFFFFF_90%)] pointer-events-none" />
 
       {/* ── HEADING BLOCK ── */}
       <div className="relative z-10 flex flex-col items-center text-center shrink-0">
         <motion.p
           initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.12 }}
-          style={{ fontSize: "11px", letterSpacing: "4px", color: "#00C896", fontWeight: 500, marginBottom: "14px" }}
+          style={{ fontSize: "11px", letterSpacing: "4px", color: "#0D9488", fontWeight: 500, marginBottom: "14px" }}
           className="uppercase"
         >
           CARBON MARKETPLACE
@@ -71,7 +71,7 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
         <motion.h2
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.32, delay: 0.24 }}
-          className="uppercase text-white"
+          className="uppercase text-slate-900"
           style={{
             fontSize: "clamp(28px, 3.2vw, 46px)",
             fontWeight: 900,
@@ -89,7 +89,7 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
           transition={{ duration: 0.28, delay: 0.36 }}
           style={{
             fontSize: "15px",
-            color: "rgba(255,255,255,0.55)",
+            color: "#64748B",
             marginTop: "14px",
             letterSpacing: "0.3px",
             textAlign: "center"
@@ -129,44 +129,44 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
           className="flex-1 group"
           style={{
             display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "340px",
-            background: "linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)), #020503", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px", padding: "24px",
+            background: "#F8FAFC", border: "1px solid rgba(0,0,0,0.07)", borderRadius: "10px", padding: "24px",
             transition: "border-color 200ms ease"
           }}
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "rgba(0,200,150,0.25)"}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)"}
         >
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Wallet className="w-4 h-4 text-[#00C896]" />
-              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "rgba(0,200,150,0.85)", fontWeight: 600 }}>FARMER WALLET</span>
+              <Wallet className="w-4 h-4 text-teal-600" />
+              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "#0D9488", fontWeight: 600 }}>FARMER WALLET</span>
             </div>
             
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Available Credits:</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#ffffff", textAlign: "right" }}>100.64</span>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Available Credits:</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0F172A", textAlign: "right" }}>100.64</span>
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Buffer Credits:</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#ffffff", textAlign: "right" }}>25.16</span>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Buffer Credits:</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0F172A", textAlign: "right" }}>25.16</span>
             </div>
 
-            <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px", marginTop: "12px" }}>
-              <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "rgba(255,255,255,0.35)", marginBottom: "4px" }}>WALLET BALANCE</div>
-              <div style={{ fontSize: "38px", fontWeight: 800, color: "#00C896", letterSpacing: "-1px" }}>
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "12px", marginTop: "12px" }}>
+              <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "#94A3B8", marginBottom: "4px" }}>WALLET BALANCE</div>
+                <div style={{ fontSize: "38px", fontWeight: 800, color: "#0D9488", letterSpacing: "-1px" }}>
                 <span style={{ fontSize: "0.6em", verticalAlign: "super", fontWeight: 400 }}>₹</span>{farmerBalance.toLocaleString()}
               </div>
             </div>
           </div>
 
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px", marginTop: "12px" }}>
-            <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "rgba(255,255,255,0.35)", marginBottom: "8px" }}>RECENT ACTIVITY</div>
+          <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "12px", marginTop: "12px" }}>
+            <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "#94A3B8", marginBottom: "8px" }}>RECENT ACTIVITY</div>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Minted</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#00C896", textAlign: "right" }}>+125 Credits</span>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Minted</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0D9488", textAlign: "right" }}>+125 Credits</span>
             </div>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Sold</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#00C896", textAlign: "right" }}>+₹18,500</span>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Sold</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0D9488", textAlign: "right" }}>+₹18,500</span>
             </div>
           </div>
         </motion.div>
@@ -177,19 +177,19 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
           className="flex-1 group relative"
           style={{
             display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "340px",
-            background: "linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)), #020503", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px", padding: "24px",
+            background: "#F8FAFC", border: "1px solid rgba(0,0,0,0.07)", borderRadius: "10px", padding: "24px",
             transition: "border-color 200ms ease"
           }}
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "rgba(0,200,150,0.25)"}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)"}
         >
           <div className="flex items-center gap-2 mb-4 justify-center">
-            <BarChart3 className="w-4 h-4 text-[#00C896]" />
-            <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "rgba(0,200,150,0.85)", fontWeight: 600 }}>LIVE MARKET</span>
+            <BarChart3 className="w-4 h-4 text-teal-600" />
+              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "#0D9488", fontWeight: 600 }}>LIVE MARKET</span>
           </div>
 
           <div className="flex-1 flex flex-col items-center justify-center relative">
-            <div style={{ fontSize: "10px", color: "rgba(255,255,255,0.3)", letterSpacing: "1px", textAlign: "center", marginBottom: "8px" }}>
+            <div style={{ fontSize: "10px", color: "#94A3B8", letterSpacing: "1px", textAlign: "center", marginBottom: "8px" }}>
               7-Day Price History
             </div>
             
@@ -202,22 +202,22 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
                </motion.div>
             </div>
 
-            <div className="relative z-10 flex flex-col items-center bg-[#020503] p-4 rounded-xl border border-[rgba(255,255,255,0.1)] w-full mb-4 text-center">
-              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "2px", color: "rgba(255,255,255,0.5)", marginBottom: "4px" }}>CARBON CREDIT</span>
-              <div style={{ fontSize: "42px", fontWeight: 800, color: "#ffffff", letterSpacing: "-1px" }}>
+            <div className="relative z-10 flex flex-col items-center bg-[#F1F5F9] p-4 rounded-xl border border-[rgba(0,0,0,0.08)] w-full mb-4 text-center">
+              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "2px", color: "#94A3B8", marginBottom: "4px" }}>CARBON CREDIT</span>
+              <div style={{ fontSize: "42px", fontWeight: 800, color: "#0F172A", letterSpacing: "-1px" }}>
                 <span style={{ fontSize: "0.6em", verticalAlign: "super", fontWeight: 400 }}>₹</span>520
-                <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.4)", fontWeight: 400, marginLeft: "4px", verticalAlign: "middle" }}>/ cr</span>
+                <span style={{ fontSize: "14px", color: "#94A3B8", fontWeight: 400, marginLeft: "4px", verticalAlign: "middle" }}>/ cr</span>
               </div>
-              <div style={{ fontSize: "10px", letterSpacing: "2px", color: "#00C896", marginTop: "6px" }}>● ACTIVE</div>
+              <div style={{ fontSize: "10px", letterSpacing: "2px", color: "#0D9488", marginTop: "6px" }}>● ACTIVE</div>
             </div>
           </div>
 
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px", marginTop: "auto" }}>
+          <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "12px", marginTop: "auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-               <span style={{ fontSize: "11px", color: "rgba(255,255,255,0.45)" }}>24h Volume:</span>
-               <span style={{ fontSize: "12px", fontWeight: 700, color: "#ffffff" }}>1,240 CMRV</span>
+               <span style={{ fontSize: "11px", color: "#64748B" }}>24h Volume:</span>
+               <span style={{ fontSize: "12px", fontWeight: 700, color: "#0F172A" }}>1,240 CMRV</span>
             </div>
-            <div style={{ fontSize: "9px", letterSpacing: "2px", color: "rgba(255,255,255,0.25)", textAlign: "center", marginTop: "8px" }}>
+            <div style={{ fontSize: "9px", letterSpacing: "2px", color: "#94A3B8", textAlign: "center", marginTop: "8px" }}>
               DEMO TRANSACTION SIMULATION
             </div>
           </div>
@@ -229,39 +229,39 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
           className="flex-1 group"
           style={{
             display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "340px",
-            background: "linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)), #020503", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "10px", padding: "24px",
+            background: "#F8FAFC", border: "1px solid rgba(0,0,0,0.07)", borderRadius: "10px", padding: "24px",
             transition: "border-color 200ms ease"
           }}
           onMouseEnter={(e) => e.currentTarget.style.borderColor = "rgba(0,200,150,0.25)"}
-          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"}
+          onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)"}
         >
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Building2 className="w-4 h-4 text-[#00C896]" />
-              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "rgba(0,200,150,0.85)", fontWeight: 600 }}>COMPANY PURCHASE</span>
+              <Building2 className="w-4 h-4 text-teal-600" />
+              <span className="uppercase" style={{ fontSize: "10px", letterSpacing: "3px", color: "#0D9488", fontWeight: 600 }}>COMPANY PURCHASE</span>
             </div>
             
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Credits Purchased:</span>
-              <span style={{ fontSize: "16px", fontWeight: 700, color: "#38BDF8" }}>{creditsPurchased}</span>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Credits Purchased:</span>
+              <span style={{ fontSize: "16px", fontWeight: 700, color: "#0D9488" }}>{creditsPurchased}</span>
             </div>
 
-            <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "12px", marginTop: "12px" }}>
-              <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "rgba(255,255,255,0.35)", marginBottom: "4px" }}>TOTAL PAYMENT</div>
-              <div style={{ fontSize: "38px", fontWeight: 800, color: "#ffffff", letterSpacing: "-1px" }}>
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: "12px", marginTop: "12px" }}>
+              <div className="uppercase" style={{ fontSize: "9px", letterSpacing: "3px", color: "#94A3B8", marginBottom: "4px" }}>TOTAL PAYMENT</div>
+              <div style={{ fontSize: "38px", fontWeight: 800, color: "#0F172A", letterSpacing: "-1px" }}>
                 <span style={{ fontSize: "0.6em", verticalAlign: "super", fontWeight: 400 }}>₹</span>{companyPayment.toLocaleString()}
               </div>
             </div>
           </div>
 
           <div style={{ marginTop: "12px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>Retirement Ready:</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#00C896" }}>✓ YES</span>
+            <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid rgba(0,0,0,0.04)" }}>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>Retirement Ready:</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0D9488" }}>✓ YES</span>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>ESG Compliance:</span>
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#00C896" }}>✓ VERIFIED</span>
+            <div style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: "1px solid rgba(0,0,0,0.04)" }}>
+              <span style={{ fontSize: "12px", color: "#64748B" }}>ESG Compliance:</span>
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#0D9488" }}>✓ VERIFIED</span>
             </div>
           </div>
         </motion.div>
@@ -283,12 +283,13 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
       >
         {features.map((feat, i) => (
           <div key={i} style={{
-            border: "1px solid rgba(0,200,150,0.3)",
+            border: "1px solid #BBF7D0",
+            background: "#F0FDF4",
             padding: "6px 16px",
             borderRadius: "20px",
             fontSize: "10px",
             letterSpacing: "2px",
-            color: "rgba(0,200,150,0.8)",
+            color: "#16A34A",
             fontWeight: 600,
             whiteSpace: "nowrap"
           }}>
@@ -305,10 +306,10 @@ export default function Slide10Demo({ isActive }: { isActive: boolean }) {
         className="relative z-10 shrink-0 flex items-center justify-center whitespace-nowrap"
         style={{ textAlign: "center", padding: "24px 48px 36px", whiteSpace: "nowrap" }}
       >
-        <span className="font-black uppercase" style={{ fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, letterSpacing: "2px", color: "#ffffff" }}>
+        <span className="font-black uppercase" style={{ fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, letterSpacing: "2px", color: "#0F172A" }}>
           FROM CARBON REDUCTION
         </span>
-        <span className="font-black uppercase" style={{ fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, letterSpacing: "2px", color: "#00C896", marginLeft: "20px" }}>
+        <span className="font-black uppercase" style={{ fontSize: "clamp(20px, 2.5vw, 30px)", fontWeight: 900, letterSpacing: "2px", color: "#0D9488", marginLeft: "20px" }}>
           TO DIRECT INCOME.
         </span>
       </motion.div>

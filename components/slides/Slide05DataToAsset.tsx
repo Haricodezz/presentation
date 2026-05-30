@@ -51,7 +51,7 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
 
   return (
     <div
-      className="w-full bg-[#020503] text-white relative flex flex-col justify-between items-center overflow-hidden"
+      className="w-full h-full bg-white text-slate-900 relative overflow-hidden flex flex-col items-center justify-center gap-6"
       style={{ fontFamily: "'Inter', sans-serif", padding: "60px 48px", height: "100vh" }}
     >
       {/* ── BACKGROUND ── */}
@@ -59,23 +59,24 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
         initial={{ opacity: 0 }} animate={{ opacity: 0.03 }} transition={{ duration: 0.60 }}
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,1) 1px,transparent 1px)",
-          backgroundSize: "40px 40px",
+          backgroundImage: "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          opacity: 0.03,
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_20%,_#020503_80%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_30%,_#F8FAFC_90%)] pointer-events-none" />
 
       {/* ── HEADING BLOCK ── */}
       <div className="relative z-10 flex flex-col items-center text-center shrink-0 w-full max-w-[1200px] mx-auto">
         <motion.p
           initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.24, delay: 0.12 }}
-          style={{ fontSize: "11px", letterSpacing: "4px", color: "#00C896", fontWeight: 500, marginBottom: "16px" }}
+          style={{ fontSize: "11px", letterSpacing: "4px", color: "#0D9488", fontWeight: 500, marginBottom: "16px" }}
         >
           FROM SATELLITE DATA TO VERIFIED DIGITAL ASSETS
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.32, delay: 0.24 }}
-          style={{ fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-1px", lineHeight: 1.05, maxWidth: "900px" }}
+          className="font-bold text-slate-900" style={{ fontSize: "clamp(32px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-1px", lineHeight: 1.05, maxWidth: "900px" }}
         >
           HOW ENVIRONMENTAL IMPACT BECOMES A TRACEABLE CARBON CREDIT.
         </motion.h2>
@@ -85,12 +86,12 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
       <div className="relative z-10 w-full max-w-[1200px] flex-1 flex flex-col justify-center mt-12 mb-12">
         
         {/* Connection Line layer */}
-        <div className="absolute left-0 right-0 top-[60px] h-[2px] bg-white/5" />
+        <div className="absolute left-0 right-0 top-[60px] h-[2px] bg-slate-200" />
         
         {/* Animated Data Packet across the line */}
         <div className="absolute left-0 right-0 top-[60px] h-[2px] overflow-visible">
           <motion.div
-            className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#00C896] shadow-[0_0_20px_#00C896] z-0"
+            className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-teal-600 z-0"
             initial={{ left: "10%", opacity: 0 }}
             animate={{ left: ["10%", "90%"], opacity: [0, 1, 1, 1, 0] }}
             transition={{ duration: 0.60, delay: 0.60, repeat: Infinity, ease: "linear" }}
@@ -108,7 +109,7 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
             >
               {/* Step Circle */}
               <motion.div 
-                className="w-[120px] h-[120px] rounded-full flex items-center justify-center border-2 bg-[#020503] relative shadow-lg mb-8"
+                className="w-[120px] h-[120px] rounded-full flex items-center justify-center border-2 bg-white relative shadow-md mb-8"
                 style={{ borderColor: `${step.color}40`, boxShadow: `0 0 30px ${step.color}10` }}
                 whileHover={{ scale: 1.05, boxShadow: `0 0 40px ${step.color}30` }}
               >
@@ -127,8 +128,8 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
 
               {/* Step Title */}
               <div className="text-center mb-6">
-                <span className="block text-[10px] text-white/40 font-mono mb-2 tracking-widest uppercase">Step {step.id}</span>
-                <h3 className="text-[13px] font-bold tracking-widest uppercase" style={{ color: step.color }}>{step.title}</h3>
+                <span className="block text-[10px] text-slate-400 font-mono mb-2 tracking-widest uppercase">Step {step.id}</span>
+                <h3 className="font-black text-slate-900 uppercase tracking-wide leading-tight">{step.title}</h3>
               </div>
 
               {/* Detail Cards */}
@@ -139,11 +140,11 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: step.delay + 0.3 + (idx * 0.1) }}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-3 flex flex-col gap-1 items-center justify-center text-center backdrop-blur-sm"
+                    className="text-center border border-slate-200 bg-slate-50 rounded-xl p-4 flex-1 shadow-sm"
                   >
                     {/* Simulated data visual per detail */}
                     {detail === "Blockchain Hash" && (
-                       <span className="text-[8px] font-mono text-cyan-400/80 w-full truncate mb-1">0x{Math.random().toString(16).slice(2,10)}...{Math.random().toString(16).slice(2,6)}</span>
+                       <span className="text-green-600">Digital Carbon Wealth</span>
                     )}
                     {detail === "NDVI" && (
                        <div className="flex gap-1 w-full justify-center mb-1">
@@ -154,11 +155,11 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
                        </div>
                     )}
                     {(detail === "Vegetation Analysis" || detail === "Fraud Detection" || detail === "Verification Pipeline") && (
-                       <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mb-1">
+                       <div className="w-full h-1 bg-slate-200 rounded-full overflow-hidden mb-1">
                          <motion.div className="h-full bg-current opacity-50" style={{ color: step.color }} initial={{ width: 0 }} animate={{ width: "100%" }} transition={{ delay: step.delay + 1, duration: 0.60 }} />
                        </div>
                     )}
-                    <span className="text-[10px] text-white/80 font-semibold">{detail}</span>
+                    <p className="text-center text-slate-500 mt-1 font-light" style={{ fontSize: "clamp(9px, 0.8vw, 11px)" }}>{detail}</p>
                   </motion.div>
                 ))}
               </div>
@@ -166,7 +167,7 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
               {/* Connector Arrow (except last) */}
               {index < steps.length - 1 && (
                 <div className="absolute right-[-15px] top-[60px] -translate-y-1/2 z-0 hidden lg:block">
-                  <ArrowRight className="w-6 h-6 text-white/10" />
+                  <ArrowRight className="w-6 h-6 text-slate-300" />
                 </div>
               )}
             </motion.div>
@@ -177,7 +178,7 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
       {/* ── BOTTOM TRACKER ── */}
       <motion.div
         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.32, delay: 1.80 }}
-        className="w-full max-w-[1200px] border border-white/10 rounded-xl bg-white/5 p-4 flex items-center justify-center gap-4 flex-wrap backdrop-blur-md z-10 shrink-0"
+        className="w-full max-w-[1200px] border border-slate-200 rounded-xl bg-slate-50 p-4 flex items-center justify-center gap-4 flex-wrap backdrop-blur-md z-10 shrink-0"
       >
         {[
           "Satellite Data",
@@ -187,11 +188,11 @@ export default function Slide05DataToAsset({ isActive }: { isActive: boolean }) 
           "Tradeable Carbon Asset"
         ].map((label, i) => (
           <div key={i} className="flex items-center gap-4">
-            <span className="text-[11px] font-bold tracking-widest uppercase text-white/70 flex items-center gap-2">
-              <CheckCircle2 className="w-3 h-3 text-[#00C896]" />
+            <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-green-700 mb-2">
+              <CheckCircle2 className="w-3 h-3 text-teal-600" />
               {label}
             </span>
-            {i < 4 && <span className="text-[#00C896] text-[10px]">→</span>}
+            {i < 4 && <span className="text-teal-600 text-[10px]">→</span>}
           </div>
         ))}
       </motion.div>

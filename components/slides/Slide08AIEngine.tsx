@@ -83,7 +83,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
   return (
     <div style={{
       width: "100%", height: "100vh", overflow: "hidden",
-      background: "#030705", color: "white",
+      background: "#FFFFFF", color: "#0F172A",
       fontFamily: "'Inter', sans-serif",
       display: "flex", flexDirection: "column", position: "relative",
     }}>
@@ -91,8 +91,8 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
       {/* ── GLOBAL KEYFRAMES ── */}
       <style>{`
         @keyframes breathe {
-          0%,100%{ box-shadow:0 0 30px rgba(34,197,94,.35),0 0 70px rgba(34,197,94,.12),inset 0 0 24px rgba(34,197,94,.08);}
-          50%    { box-shadow:0 0 60px rgba(34,197,94,.65),0 0 120px rgba(34,197,94,.25),inset 0 0 40px rgba(34,197,94,.15);}
+          0%,100%{ box-shadow:0 1px 3px rgba(0,0,0,0.08), 0 0 0 3px rgba(22,163,74,0.10);}
+          50%    { box-shadow:0 2px 8px rgba(0,0,0,0.12), 0 0 0 6px rgba(22,163,74,0.18);}
         }
         @keyframes float{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
         @keyframes blink{ 0%,100%{opacity:.3;} 50%{opacity:1;} }
@@ -107,15 +107,16 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
       {/* ── BACKGROUND GRID ── */}
       <div style={{
         position:"absolute", inset:0, pointerEvents:"none",
-        backgroundImage:"linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px)",
+        backgroundImage:"linear-gradient(rgba(0,0,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.04) 1px,transparent 1px)",
         backgroundSize:"40px 40px"
       }}/>
-      <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at 50% 40%,rgba(34,197,94,.07) 0%,transparent 60%)",pointerEvents:"none"}}/>
+      <div style={{
+        position:"absolute", inset:0, background:"radial-gradient(ellipse at 50% 40%,rgba(34,197,94,.05) 0%,transparent 60%)",pointerEvents:"none"}}/>
 
       {/* ── HEADING ── */}
       <div style={{textAlign:"center",flexShrink:0,padding:"6px 44px 0",zIndex:10}}>
         <motion.p initial={{opacity:0,y:-6}} animate={{opacity:1,y:0}} transition={{delay: 0.12}}
-          style={{fontSize:"10px",letterSpacing:"5px",color:"#4ade80",fontWeight:700,marginBottom:5,textTransform:"uppercase"}}>
+          style={{fontSize:"10px",letterSpacing:"5px",color:"#16A34A",fontWeight:700,marginBottom:5,textTransform:"uppercase"}}>
           SYSTEM INTELLIGENCE
         </motion.p>
         <motion.h2 initial={{opacity:0,y:8}} animate={{opacity:1,y:0}} transition={{delay: 0.22}}
@@ -123,7 +124,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
           AI CARBON INTELLIGENCE ENGINE
         </motion.h2>
         <motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{delay: 0.34}}
-          style={{fontSize:"12px",color:"rgba(255,255,255,.42)",marginTop:5}}>
+          style={{fontSize:"12px",color:"#64748B",marginTop:5}}>
           Transforming Satellite Data Into Verifiable Carbon Intelligence Through Machine Learning.
         </motion.p>
       </div>
@@ -136,8 +137,8 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
           style={{flex:"0 0 21%",display:"flex",flexDirection:"column",justifyContent:"center",gap:6}}>
 
           <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:4}}>
-            <Satellite style={{width:11,height:11,color:"#4ade80"}}/>
-            <span style={{fontSize:"9px",letterSpacing:"2px",color:"rgba(74,222,128,.75)",fontWeight:700,textTransform:"uppercase"}}>
+            <Satellite style={{width:11,height:11,color:"#16A34A"}}/>
+            <span style={{fontSize:"9px",letterSpacing:"2px",color:"rgba(22,163,74,.75)",fontWeight:700,textTransform:"uppercase"}}>
               SATELLITE INPUT STREAM
             </span>
           </div>
@@ -145,33 +146,32 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
           {INPUTS.map((inp, i) => (
             <motion.div key={i} initial={{opacity:0,x:-18}} animate={{opacity:1,x:0}} transition={{delay: 0.18 + i * 0.04}}
               style={{
-                height:42, background:"rgba(255,255,255,.03)",
-                border:"1px solid rgba(34,197,94,.14)",
+                height:42, background:"#F8FAFC",
+                border:"1px solid #E2E8F0",
                 borderRadius:8, display:"flex", alignItems:"center",
                 gap:10, padding:"0 12px", position:"relative", overflow:"hidden",
-                backdropFilter:"blur(8px)"
               }}>
               {/* shimmer */}
-              <div style={{position:"absolute",top:0,bottom:0,width:"55%",background:"linear-gradient(90deg,transparent,rgba(74,222,128,.05),transparent)",animation:`shimmer ${3.2+i*.35}s linear infinite`}}/>
+              <div style={{position:"absolute",top:0,bottom:0,width:"55%",background:"linear-gradient(90deg,transparent,rgba(22,163,74,.04),transparent)",animation:`shimmer ${3.2+i*.35}s linear infinite`}}/>
               <div style={{
                 width:22,height:22,borderRadius:i%2===0?"5px":"50%",
-                background:"rgba(74,222,128,.1)",border:"1px solid rgba(74,222,128,.3)",
+                background:"#F0FDF4",border:"1px solid #BBF7D0",
                 display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0
               }}>
-                <inp.icon style={{width:11,height:11,color:"#4ade80"}}/>
+                <inp.icon style={{width:11,height:11,color:"#16A34A"}}/>
               </div>
-              <span style={{fontSize:"11px",color:"#94a3b8",fontWeight:500}}>{inp.label}</span>
+              <span style={{fontSize:"11px",color:"#475569",fontWeight:500}}>{inp.label}</span>
               {/* live pulse dot */}
-              <span style={{marginLeft:"auto",width:5,height:5,borderRadius:"50%",background:"#4ade80",flexShrink:0,animation:`blink ${1.8+i*.2}s ${i*.25}s infinite`}}/>
+              <span style={{marginLeft:"auto",width:5,height:5,borderRadius:"50%",background:"#16A34A",flexShrink:0,animation:`blink ${1.8+i*.2}s ${i*.25}s infinite`}}/>
             </motion.div>
           ))}
 
           <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay: 0.80}}
             style={{display:"flex",alignItems:"center",gap:6,marginTop:4}}>
             {[0,1,2].map(j=>(
-              <span key={j} style={{width:6,height:6,borderRadius:"50%",background:"#4ade80",display:"inline-block",animation:`blink 1.4s ${j*.38}s infinite`}}/>
+              <span key={j} style={{width:6,height:6,borderRadius:"50%",background:"#16A34A",display:"inline-block",animation:`blink 1.4s ${j*.38}s infinite`}}/>
             ))}
-            <span style={{fontSize:"10px",color:"#4ade80",opacity:.6}}>feeding AI core</span>
+            <span style={{fontSize:"10px",color:"#16A34A",opacity:.6}}>feeding AI core</span>
           </motion.div>
         </motion.div>
 
@@ -186,7 +186,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
               return (
                 <g key={`sp-${i}`}>
                   <line x1={CX} y1={CY} x2={nx} y2={ny}
-                    stroke={mod.color} strokeOpacity=".18" strokeWidth="1" strokeDasharray="5 4"/>
+                    stroke={mod.color} strokeOpacity=".14" strokeWidth="1" strokeDasharray="5 4"/>
                   {/* animated pulse overlay */}
                   <line x1={CX} y1={CY} x2={nx} y2={ny}
                     stroke={mod.color} strokeWidth="1.5" strokeDasharray="5 4"
@@ -202,7 +202,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
             {/* Expanding pulse rings from core */}
             {[0,1,2].map(r=>(
               <motion.circle key={r} cx={CX} cy={CY} r={54}
-                stroke="#4ade80" strokeWidth={r===0?1:.6} fill="none"
+                stroke="#16A34A" strokeWidth={r===0?1:.6} fill="none"
                 initial={{r:54,opacity:.5}}
                 animate={{r:[54,R+18],opacity:[.45,0]}}
                 transition={{duration: 0.60,delay:r*1.15,repeat:Infinity,ease:"easeOut"}}
@@ -211,26 +211,26 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
 
             {/* Outer orbit ring */}
             <motion.circle cx={CX} cy={CY} r={R+14}
-              stroke="#4ade80" strokeWidth=".5" fill="none" strokeOpacity=".1" strokeDasharray="6 6"
+              stroke="#16A34A" strokeWidth=".5" fill="none" strokeOpacity=".08" strokeDasharray="6 6"
               animate={{rotate:360}}
               style={{transformOrigin:`${CX}px ${CY}px`}}
               transition={{duration: 20.0,repeat:Infinity,ease:"linear"}}
             />
 
             {/* ── AI CORE ── */}
-            <circle cx={CX} cy={CY} r={58} fill="#030705" stroke="#4ade80" strokeWidth="2"/>
-            <circle cx={CX} cy={CY} r={52} fill="rgba(34,197,94,.05)" stroke="#4ade80" strokeWidth=".6" strokeOpacity=".4"/>
+            <circle cx={CX} cy={CY} r={58} fill="#FFFFFF" stroke="#16A34A" strokeWidth="2"/>
+            <circle cx={CX} cy={CY} r={52} fill="rgba(34,197,94,.04)" stroke="#16A34A" strokeWidth=".6" strokeOpacity=".35"/>
             <foreignObject x={CX-48} y={CY-38} width={96} height={76}>
               <div style={{
                 display:"flex",flexDirection:"column",alignItems:"center",
                 justifyContent:"center",height:"100%",textAlign:"center",
                 animation:"breathe 3s infinite"
               }}>
-                <Brain style={{width:22,height:22,color:"#4ade80",marginBottom:4}}/>
-                <div style={{fontSize:"9px",fontWeight:800,color:"white",letterSpacing:"1px",lineHeight:1.35}}>
+                <Brain style={{width:22,height:22,color:"#16A34A",marginBottom:4}}/>
+                <div style={{fontSize:"9px",fontWeight:800,color:"#0F172A",letterSpacing:"1px",lineHeight:1.35}}>
                   CARBON AI<br/>ENGINE
                 </div>
-                <div style={{fontSize:"7px",color:"rgba(74,222,128,.55)",letterSpacing:".5px",marginTop:3}}>
+                <div style={{fontSize:"7px",color:"rgba(22,163,74,.50)",letterSpacing:".5px",marginTop:3}}>
                   ML · PREDICT · VERIFY
                 </div>
               </div>
@@ -249,7 +249,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
                     initial={{opacity:.2}} animate={{opacity:[.15,.6,.15]}}
                     transition={{duration: 0.60,delay:i*.4,repeat:Infinity}}
                   />
-                  <circle cx={nx} cy={ny} r={Nr} fill="#030705" stroke={mod.color} strokeWidth="1.4" strokeOpacity=".65"/>
+                  <circle cx={nx} cy={ny} r={Nr} fill="#FFFFFF" stroke={mod.color} strokeWidth="1.4" strokeOpacity=".65"/>
                   <circle cx={nx} cy={ny} r={Nr-7} fill={`${mod.color}12`}/>
                   <foreignObject x={nx-Nr+4} y={ny-Nr+4} width={(Nr-4)*2} height={(Nr-4)*2}>
                     <div style={{
@@ -257,7 +257,7 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
                       justifyContent:"center",height:"100%",textAlign:"center",gap:2
                     }}>
                       <mod.icon style={{width:13,height:13,color:mod.color}}/>
-                      <span style={{fontSize:"6px",fontWeight:800,color:"white",lineHeight:1.25,opacity:.92}}>
+                      <span style={{fontSize:"6px",fontWeight:800,color:"#0F172A",lineHeight:1.25,opacity:.92}}>
                         {mod.label}
                       </span>
                     </div>
@@ -282,20 +282,18 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
           {OUTPUTS.map((out,i)=>(
             <motion.div key={i} initial={{opacity:0,x:18}} animate={{opacity:1,x:0}} transition={{delay: 0.21 + i * 0.04}}
               style={{
-                background:"rgba(255,255,255,.03)",
-                border:`1px solid ${out.color}22`,
+                background:"#F8FAFC",
+                border:`1px solid #E2E8F0`,
+                borderLeft:`3px solid ${out.color}`,
                 borderRadius:8, display:"flex", alignItems:"center",
                 gap:10, padding:"9px 13px", position:"relative", overflow:"hidden",
-                backdropFilter:"blur(8px)"
               }}>
-              {/* left color accent bar */}
-              <div style={{position:"absolute",left:0,top:"20%",bottom:"20%",width:2,borderRadius:2,background:out.color,boxShadow:`0 0 8px ${out.color}`}}/>
               <motion.span
-                style={{width:7,height:7,borderRadius:"50%",background:out.color,display:"inline-block",flexShrink:0,boxShadow:`0 0 8px ${out.color}`}}
+                style={{width:7,height:7,borderRadius:"50%",background:out.color,display:"inline-block",flexShrink:0}}
                 animate={{opacity:[.5,1,.5],scale:[.9,1.25,.9]}}
                 transition={{duration: 0.60,delay:i*.3,repeat:Infinity}}
               />
-              <span style={{fontSize:"11px",color:"#e2e8f0",flex:1,fontWeight:500}}>{out.label}</span>
+              <span style={{fontSize:"11px",color:"#334155",flex:1,fontWeight:500}}>{out.label}</span>
               <motion.div animate={{opacity:[.4,1,.4]}} transition={{duration: 0.60,delay:i*.25,repeat:Infinity}}>
                 <CheckCircle2 style={{width:10,height:10,color:out.color}}/>
               </motion.div>
@@ -315,13 +313,13 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
 
       {/* ── METRICS BAR ── */}
       <motion.div initial={{opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{delay: 0.88}}
-        style={{
-          flexShrink:0, borderTop:"1px solid rgba(74,222,128,.1)",
+          style={{
+          flexShrink:0, borderTop:"1px solid #E2E8F0", background:"#F8FAFC",
           padding:"8px 44px 5px", display:"flex", justifyContent:"space-between", zIndex:10
         }}>
         {METRICS.map((m,i)=>(
           <div key={i} style={{textAlign:"center",flex:1}}>
-            <div style={{fontSize:"clamp(24px,2.8vw,36px)",fontWeight:800,color:"#4ade80",lineHeight:1,textShadow:"0 0 20px rgba(74,222,128,.5)"}}>
+            <div style={{fontSize:"clamp(24px,2.8vw,36px)",fontWeight:800,color:"#16A34A",lineHeight:1,textShadow:"none"}}>
               <CountUp target={m.value} delay={(2.4+i*.18)*1000}/>%
             </div>
             <div style={{fontSize:"8px",letterSpacing:"1.5px",color:"#6b7280",textTransform:"uppercase",marginTop:3}}>{m.label}</div>
@@ -336,8 +334,8 @@ export default function Slide08AIEngine({ isActive }: { isActive: boolean }) {
           fontSize:"clamp(10px,1.1vw,13px)",fontWeight:800,
           letterSpacing:"3px",textTransform:"uppercase",zIndex:10
         }}>
-        <span style={{color:"rgba(255,255,255,.6)"}}>FROM RAW SATELLITE DATA TO VERIFIED </span>
-        <span style={{color:"#4ade80",textShadow:"0 0 18px rgba(74,222,128,.7)"}}>CARBON INTELLIGENCE</span>
+        <span style={{color:"#64748B"}}>FROM RAW SATELLITE DATA TO VERIFIED </span>
+        <span style={{color:"#16A34A"}}>CARBON INTELLIGENCE</span>
       </motion.div>
 
     </div>

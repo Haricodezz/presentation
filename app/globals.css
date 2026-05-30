@@ -1,22 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #050A05;
-  --color-primary: #22C55E;
-  --color-secondary: #0EA5E9;
-  --color-muted: #64748B;
-  --color-danger: #EF4444;
+  --color-background: #FFFFFF;
+  --color-primary: #16A34A;
+  --color-secondary: #0D9488;
+  --color-muted: #94A3B8;
+  --color-danger: #DC2626;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
 }
 
 :root {
-  --bg-dark: #050A05;
-  --accent-green: #22C55E;
-  --accent-blue: #0EA5E9;
-  --text-white: #F8FAFC;
-  --text-muted: #64748B;
-  --danger: #EF4444;
+  /* Primary Surfaces */
+  --bg-page: #FFFFFF;
+  --bg-surface: #F8FAFC;
+  --bg-elevated: #F1F5F9;
+  --bg-panel: #E2E8F0;
+
+  /* Accent Colors */
+  --accent-green: #16A34A;
+  --accent-green-light: #22C55E;
+  --accent-teal: #0D9488;
+  --accent-green-soft: #BBF7D0;
+
+  /* Text */
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-label: #64748B;
+
+  /* Borders */
+  --border-subtle: #E2E8F0;
+  --border-default: #CBD5E1;
+  --border-accent: #86EFAC;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08);
+
+  /* Danger / Warning */
+  --danger: #DC2626;
+  --warning: #D97706;
+
+  /* Legacy compat */
+  --bg-dark: #FFFFFF;
+  --accent-blue: #0D9488;
+  --text-white: #0F172A;
 }
 
 * {
@@ -29,8 +58,8 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--bg-dark);
-  color: var(--text-white);
+  background: #FFFFFF;
+  color: #0F172A;
   font-family: var(--font-sans);
   cursor: default;
   user-select: none;
@@ -42,7 +71,7 @@ html, body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: var(--bg-dark);
+  background: #FFFFFF;
 }
 
 /* Individual slide */
@@ -72,7 +101,7 @@ html, body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(100, 116, 139, 0.3);
+  background: #CBD5E1;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -92,7 +121,7 @@ html, body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #ffffff, #a1a1aa);
+  background: linear-gradient(to right, #15803D, #22C55E);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

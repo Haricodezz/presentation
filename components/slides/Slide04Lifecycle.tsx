@@ -22,7 +22,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
 
   return (
     <div
-      className="w-full h-full bg-[#020503] text-white relative overflow-hidden flex flex-col items-center justify-center gap-8 px-10"
+      className="w-full h-full bg-white text-slate-900 relative overflow-hidden flex flex-col items-center justify-center gap-8 px-10"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Background grid */}
@@ -33,11 +33,12 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+            "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
+          opacity: 0.03,
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_transparent_10%,_#020503_90%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_transparent_10%,_#F8FAFC_90%)] pointer-events-none" />
 
       {/* ── TITLE ── */}
       <div className="relative z-10 flex flex-col items-center text-center">
@@ -45,7 +46,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.24, delay: 0.12 }}
-          className="text-[12px] font-mono tracking-[0.3em] uppercase text-primary mb-2"
+          className="text-[12px] font-mono tracking-[0.3em] uppercase text-green-600 mb-2"
         >
           From Land To Verified Carbon Credit
         </motion.p>
@@ -53,7 +54,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.32, delay: 0.24 }}
-          className="font-black text-white uppercase tracking-wide leading-tight"
+          className="font-black text-slate-900 uppercase tracking-wide leading-tight"
           style={{ fontSize: "clamp(20px, 2.8vw, 38px)" }}
         >
           The Complete Carbon Credit Lifecycle
@@ -67,7 +68,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.60, delay: 0.40, ease: "easeInOut" }}
-          className="absolute top-[22px] left-4 right-4 h-px bg-white/10 origin-left"
+          className="absolute top-[22px] left-4 right-4 h-px bg-slate-200 origin-left"
         />
 
         {/* Animated pulse line that fills from left to right */}
@@ -75,7 +76,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.60, delay: 0.52, ease: "easeInOut" }}
-          className="absolute top-[21px] left-4 right-4 h-[3px] bg-gradient-to-r from-primary to-primary/40 origin-left shadow-[0_0_12px_rgba(34,197,94,0.7)]"
+          className="absolute top-[21px] left-4 right-4 h-[3px] bg-gradient-to-r from-green-600 to-green-400 origin-left shadow-[0_0_8px_rgba(22,163,74,0.25)]"
         />
 
         {/* Stages row */}
@@ -105,9 +106,9 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
                     initial={{ borderColor: "rgba(255,255,255,0.15)", backgroundColor: "rgba(255,255,255,0.03)" }}
                     animate={{ borderColor: "rgba(34,197,94,0.8)", backgroundColor: "rgba(34,197,94,0.12)" }}
                     transition={{ duration: 0.16, delay }}
-                    className="w-11 h-11 rounded-full border-2 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.6)] bg-[#020503]"
+                    className="w-11 h-11 rounded-full border-2 flex items-center justify-center bg-white shadow-sm"
                   >
-                    <stage.icon className="w-[18px] h-[18px] text-white/80" />
+                    <stage.icon className="w-[18px] h-[18px] text-slate-600" />
                   </motion.div>
                 </div>
 
@@ -116,7 +117,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
                   initial={{ opacity: 0.3 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.16, delay: delay + 0.1 }}
-                  className="text-[10px] font-bold uppercase tracking-wide text-white leading-tight mb-1.5"
+                  className="text-[10px] font-bold uppercase tracking-wide text-slate-800 leading-tight mb-1.5"
                   style={{ whiteSpace: "pre-line", minHeight: "28px" }}
                 >
                   {stage.title}
@@ -127,7 +128,7 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.55 }}
                   transition={{ duration: 0.20, delay: delay + 0.2 }}
-                  className="text-[9px] text-white/50 font-light leading-relaxed"
+                  className="text-[9px] text-slate-400 font-light leading-relaxed"
                 >
                   {stage.desc}
                 </motion.p>
@@ -142,11 +143,11 @@ export default function Slide04Lifecycle({ isActive }: { isActive: boolean }) {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.32, delay: 2.80 }}
-        className="relative z-10 text-center border border-white/10 bg-white/[0.01] rounded-xl px-10 py-4"
+        className="relative z-10 text-center border border-slate-200 bg-slate-50 rounded-xl px-10 py-4 shadow-sm"
       >
-        <p className="text-white font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 18px)" }}>
+        <p className="text-slate-900 font-medium" style={{ fontSize: "clamp(13px, 1.3vw, 18px)" }}>
           From Environmental Action To Verified Climate Impact —{" "}
-          <span className="text-primary font-bold">
+          <span className="text-green-600 font-bold">
             Fully Automated, Transparent And Traceable.
           </span>
         </p>

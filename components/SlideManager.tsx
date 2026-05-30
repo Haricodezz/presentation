@@ -68,12 +68,12 @@ export default function SlideManager() {
           >
             <span 
               className="uppercase mb-0.5"
-              style={{ fontSize: "9px", letterSpacing: "3px", color: "rgba(255,255,255,0.35)", wordSpacing: "-2px" }}
+              style={{ fontSize: "9px", letterSpacing: "3px", color: "rgba(15,23,42,0.40)", wordSpacing: "-2px" }}
             >
               SLIDE
             </span>
             <span 
-              style={{ fontSize: "28px", fontWeight: "700", color: "#00C896", lineHeight: "1" }}
+              style={{ fontSize: "28px", fontWeight: "700", color: "#16A34A", lineHeight: "1" }}
             >
               {displayNumber}
             </span>
@@ -92,7 +92,7 @@ export default function SlideManager() {
             transition={{ duration: 1 }}
           >
             <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span className="text-white/60 text-[10px] tracking-[0.3em] uppercase font-medium">
+            <span className="text-slate-400 text-[10px] tracking-[0.3em] uppercase font-medium">
               Carbon MRV Platform
             </span>
           </motion.div>

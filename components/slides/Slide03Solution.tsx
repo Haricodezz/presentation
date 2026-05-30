@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -33,7 +33,7 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
 
   return (
     <div
-      className="w-full h-full bg-[#020503] text-white relative overflow-hidden flex items-center justify-center px-14 gap-10"
+      className="w-full h-full bg-white text-slate-900 relative overflow-hidden flex items-center justify-center px-14 gap-10"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Background grid */}
@@ -43,12 +43,12 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
         transition={{ duration: 0.60 }}
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
           backgroundSize: "70px 70px",
+          opacity: 0.03,
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_#020503_90%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_30%,_#F8FAFC_90%)] pointer-events-none" />
 
       {/* ══════════════════════════════════════════
           LEFT COLUMN — Title + Pillars
@@ -61,7 +61,7 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.28, delay: 0.16 }}
-            className="text-[14px] font-mono tracking-[0.28em] uppercase text-primary mb-3"
+            className="text-[11px] font-mono tracking-[0.3em] uppercase text-green-600 mb-3"
           >
             Introducing The Carbon MRV Platform
           </motion.p>
@@ -69,7 +69,7 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.36, delay: 0.28 }}
-            className="font-black text-white leading-tight"
+            className="font-black text-slate-900 uppercase tracking-wide leading-tight"
             style={{ fontSize: "clamp(22px, 2.6vw, 36px)" }}
           >
             A Complete Ecosystem For Measuring, Verifying, Trading And Retiring Carbon Credits
@@ -81,7 +81,7 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.32, delay: 0.52 }}
-          className="w-full h-px bg-white/10 origin-left"
+          className="w-full h-px bg-slate-200 origin-left"
         />
 
         {/* Four Pillars */}
@@ -94,16 +94,16 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
           {pillars.map((pillar, idx) => (
             <div key={idx} className="flex flex-col gap-1">
               <div className="flex items-center gap-2">
-                <pillar.icon className="w-5 h-5 text-primary opacity-90 shrink-0" />
+                <pillar.icon className="w-5 h-5 text-green-600 opacity-90 shrink-0" />
                 <h3
-                  className="font-bold tracking-widest text-white uppercase"
+                  className="font-bold tracking-widest text-slate-800 uppercase"
                   style={{ fontSize: "clamp(11px, 1.1vw, 14px)" }}
                 >
                   {pillar.title}
                 </h3>
               </div>
               <p
-                className="text-white/45 font-light leading-relaxed pl-7"
+                className="p-5 border border-slate-200 bg-slate-50 rounded-xl shadow-sm"
                 style={{ fontSize: "clamp(10px, 0.9vw, 12px)" }}
               >
                 {pillar.desc}
@@ -129,14 +129,14 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
           <circle
             cx={C} cy={C} r={R}
             fill="none"
-            stroke="rgba(255,255,255,0.08)"
+            stroke="rgba(0,0,0,0.08)"
             strokeWidth="1.5"
             strokeDasharray="5 7"
           />
           <motion.circle
             cx={C} cy={C} r={R}
             fill="none"
-            stroke="rgba(34,197,94,0.5)"
+            stroke="rgba(22,163,74,0.25)"
             strokeWidth="2"
             strokeDasharray="46 834"
             strokeLinecap="round"
@@ -151,9 +151,9 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.32, delay: 0.52 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] rounded-full bg-primary/10 border border-primary/40 flex flex-col items-center justify-center shadow-[0_0_30px_rgba(34,197,94,0.25)] z-10"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px] rounded-full bg-green-50 border border-green-300 flex flex-col items-center justify-center shadow-md z-10"
         >
-          <span className="text-[9px] font-mono tracking-widest uppercase text-primary text-center leading-relaxed font-semibold">
+          <span className="text-[9px] font-mono tracking-widest uppercase text-green-700 text-center leading-relaxed font-semibold">
             Platform<br />Core
           </span>
         </motion.div>
@@ -165,7 +165,7 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.18, delay: 0.64 + idx * 0.22 }}
-            className="absolute flex items-center justify-center rounded-full bg-white/5 border border-white/15 shadow-md"
+            className="absolute flex items-center justify-center rounded-full bg-slate-50 border border-slate-200 shadow-md"
             style={{
               // Pixel positions in 380×380 space, nodes centered on the orbit
               left: `${item.px}px`,
@@ -175,9 +175,9 @@ export default function Slide03Solution({ isActive }: { isActive: boolean }) {
               height: "36px"
             }}
           >
-            <item.icon className="w-4 h-4 text-white/80" />
+            <item.icon className="w-4 h-4 text-slate-700" />
             <span
-              className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[80px] text-[8.5px] font-medium text-white/70 uppercase tracking-wider text-center leading-tight"
+              className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[80px] text-[8.5px] font-medium text-slate-600 uppercase tracking-wider text-center leading-tight"
               style={{ whiteSpace: "pre-line" }}
             >
               {item.label}

@@ -48,7 +48,7 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
 
   return (
     <div 
-      className="w-full h-full bg-[#020503] text-white relative overflow-hidden flex flex-col items-center justify-center gap-10 py-12 px-16"
+      className="w-full h-full bg-white text-slate-900 relative overflow-hidden flex flex-col items-center justify-center gap-10 py-12 px-16"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* 1. Background appears */}
@@ -59,11 +59,12 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
+            "linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
+          opacity: 0.03,
         }}
       />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_transparent_10%,_#020503_90%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_transparent_10%,_#F8FAFC_90%)] pointer-events-none" />
 
       {/* 2. Earth or carbon visualization fades in */}
       <motion.div
@@ -72,9 +73,9 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
         transition={{ duration: 0.60, delay: 0.20, ease: "easeOut" }}
         className="absolute bottom-[-20%] left-1/2 -translate-x-1/2 w-[120vh] h-[120vh] pointer-events-none"
       >
-        <div className="absolute inset-0 rounded-full border-[2px] border-dashed border-red-500/30 animate-[spin_100s_linear_infinite]" />
-        <div className="absolute inset-[10%] rounded-full border border-red-500/20 animate-[spin_80s_linear_infinite_reverse]" />
-        <div className="absolute inset-[25%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(239,68,68,0.1)_0%,_transparent_70%)]" />
+        <div className="absolute inset-0 rounded-full border-[2px] border-dashed border-red-500/20 animate-[spin_100s_linear_infinite]" />
+        <div className="absolute inset-[10%] rounded-full border border-red-500/10 animate-[spin_80s_linear_infinite_reverse]" />
+        <div className="absolute inset-[25%] rounded-full bg-[radial-gradient(circle_at_center,_rgba(239,68,68,0.06)_0%,_transparent_70%)]" />
       </motion.div>
 
       {/* ── TOP: Title & Supporting Statement ── */}
@@ -83,17 +84,17 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.40, delay: 0.40 }}
-          className="text-[40px] md:text-[52px] font-black tracking-wide uppercase text-white mb-6 leading-tight"
+          className="text-[40px] md:text-[52px] font-black tracking-wide uppercase text-slate-900 mb-6 leading-tight"
         >
           The Climate Crisis Is Not Just <br />
-          An <span className="text-red-500 drop-shadow-[0_0_20px_rgba(239,68,68,0.4)]">Environmental</span> Problem
+          An <span className="text-red-600">Environmental</span> Problem
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.40, delay: 0.64 }}
-          className="text-gray-300 font-light text-[20px] md:text-[24px] max-w-4xl leading-relaxed"
+          className="text-slate-500 font-light text-[20px] md:text-[24px] max-w-4xl leading-relaxed"
         >
           Every year, millions of hectares of land lose their carbon storage potential while those protecting nature struggle to receive financial rewards.
         </motion.p>
@@ -119,11 +120,11 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
             <motion.div 
               key={idx}
               variants={itemVariants}
-              className="flex flex-col items-center justify-center p-8 border border-white/5 bg-white/[0.02] rounded-xl backdrop-blur-sm relative overflow-hidden group"
+              className="flex flex-col items-center justify-center p-8 border border-slate-200 bg-slate-50 rounded-xl relative overflow-hidden group shadow-sm"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <item.icon className="w-10 h-10 text-red-400 mb-4 opacity-80" strokeWidth={1.5} />
-              <p className="text-center text-[16px] font-medium text-white/90 tracking-wide uppercase">
+              <item.icon className="w-10 h-10 text-red-500 mb-4 opacity-80" strokeWidth={1.5} />
+              <p className="text-center text-[16px] font-medium text-slate-700 tracking-wide uppercase">
                 {item.title}
               </p>
             </motion.div>
@@ -146,10 +147,10 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
             <motion.div 
               key={idx}
               variants={itemVariants}
-              className="flex flex-col items-center justify-center p-6 border-t border-white/10"
+              className="flex flex-col items-center justify-center p-6 border-t border-slate-200"
             >
               <item.icon className="w-8 h-8 text-primary mb-4 opacity-70" strokeWidth={1.5} />
-              <p className="text-center text-[15px] text-gray-400 font-light leading-relaxed">
+              <p className="text-center text-[15px] text-slate-500 font-light leading-relaxed">
                 {item.title}
               </p>
             </motion.div>
@@ -166,10 +167,10 @@ export default function Slide02Problem({ isActive }: { isActive: boolean }) {
           transition={{ duration: 0.40, delay: 1.92 }}
           className="text-center"
         >
-          <p className="text-[26px] md:text-[32px] font-bold text-white uppercase tracking-widest drop-shadow-md">
+          <p className="text-[26px] md:text-[32px] font-bold text-slate-900 uppercase tracking-widest">
             Environmental Value Exists.
           </p>
-          <p className="text-[26px] md:text-[32px] font-bold text-primary uppercase tracking-widest drop-shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+          <p className="text-[26px] md:text-[32px] font-bold text-green-600 uppercase tracking-widest">
             Rewarding It Is The Challenge.
           </p>
         </motion.div>
